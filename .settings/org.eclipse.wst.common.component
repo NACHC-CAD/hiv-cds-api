@@ -2,15 +2,6 @@
     <wb-module deploy-name="smart-on-fhir-examples">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-        <dependent-module archiveName="fhirtoomop-0.1.002-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/fhir-to-omop/fhir-to-omop">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="core-0.1.002-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/core/core">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
-        <dependent-module archiveName="yaorma-0.1.002-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/yaorma/yaorma">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <property name="context-root" value="smart-on-fhir-examples"/>
         <property name="java-output-path" value="/hiv-cds-api/target/classes"/>
     </wb-module>
