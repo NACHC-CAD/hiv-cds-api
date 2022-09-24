@@ -9,10 +9,9 @@ import org.nachc.tools.fhirtoomop.fhir.parser.r4.diagnosticreport.DiagnosticRepo
 
 import com.nachc.hivcds.util.valueset.hivtest.HivTestCodes;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 public class HasHivTest {
+
+	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(HasHivTest.class);	
 	
 	public static HasHivTestResponse exec(String patientJson) {
 		// get the list of diagnostic reports

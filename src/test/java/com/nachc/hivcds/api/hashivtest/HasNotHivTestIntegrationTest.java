@@ -5,11 +5,10 @@ import org.junit.Test;
 
 import com.nach.core.util.file.FileUtil;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 public class HasNotHivTestIntegrationTest {
 
+	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(HasNotHivTestIntegrationTest.class);	
+	
 	private static final String TEST_PATIENT_FILE = "/fhir/patient/Aaron697_Little434_b8a36e7d-84c4-c766-97d0-4c9477e925f3.json";
 	
 	@Test

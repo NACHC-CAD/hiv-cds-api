@@ -10,11 +10,10 @@ import org.nachc.tools.fhirtoomop.fhir.parser.r4.valueset.ValueSetParser;
 import com.nach.core.util.fhir.parser.FhirJsonParser;
 import com.nach.core.util.file.FileUtil;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 public class HivTestCodes {
 
+	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(HivTestCodes.class);	
+	
 	private static final String[] FILES = {
 			"/hiv-cds/vocabulary/valueset/generated/valueset-nachc-a2-de2.json",
 			"/hiv-cds/vocabulary/valueset/generated/valueset-nachc-a2-de1-codes-grouper.json",

@@ -20,33 +20,6 @@
 			<artifactId>fhirtoomop</artifactId>
 			<version>1.0.001</version>
 		</dependency>
-<!--	
-		<dependency>
-			<groupId>org.nachc.cad.tools</groupId>
-			<artifactId>core</artifactId>
-			<version>0.1.002</version>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.nachc.cad</groupId>
-			<artifactId>curlew</artifactId>
-			<version>0.1.002</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.nachc.cad</groupId>
-			<artifactId>curlew</artifactId>
-			<version>0.1.002</version>
-		</dependency>
---> 
-	
-		<!-- LOMBOK (Lombok jar also needs to be added to Eclipse IDE) -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
-            <scope>provided</scope>
-        </dependency>
 
 		<!-- JUNIT https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>

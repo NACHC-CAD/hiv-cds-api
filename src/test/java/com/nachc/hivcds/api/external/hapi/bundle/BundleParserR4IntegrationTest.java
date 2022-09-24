@@ -7,11 +7,11 @@ import com.nach.core.util.file.FileUtil;
 
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.parser.IParser;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 public class BundleParserR4IntegrationTest {
 
+	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(BundleParserR4IntegrationTest.class);	
+	
 	private static final FhirContext CTX = FhirContext.forR4();
 
 	private static final String TEST_PATIENT_FILE = "/fhir/patient/Glenn0_Hermiston71_d7e5852a-974c-6d45-f81d-5a87bbd05d2a.json";
