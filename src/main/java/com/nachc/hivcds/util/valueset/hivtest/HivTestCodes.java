@@ -30,15 +30,10 @@ public class HivTestCodes {
 	}
 	
 	private static void addCodes(String fileName, List<String> rtn) {
-		log.info("--- FILE -------------------------");
-		log.info(fileName);
-		String json = FileUtil.getAsString(fileName);
-		ValueSet valueSet = FhirJsonParser.parse(json, ValueSet.class);
-		ValueSetParser parser = new ValueSetParser(valueSet);
-		List<Coding> codingList = parser.getConcepts();
-		log.info("Got " + codingList.size() + " codings");
-		for(Coding coding : codingList) {
-			rtn.add(coding.getCode());
+		try {
+			AddCodesR4.exec(fileName, rtn);
+		} catch(Exception exp) {
+			AddCodesDstu3.exec(fileName, rtn);
 		}
 	}
 	
