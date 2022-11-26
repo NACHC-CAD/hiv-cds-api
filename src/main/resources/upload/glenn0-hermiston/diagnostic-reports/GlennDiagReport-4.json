@@ -1,0 +1,72 @@
+{
+  "result": [
+    {
+      "reference": "urn:uuid:452729d7-a109-46ec-3b9c-8e3da33fe01f",
+      "display": "Leukocytes [#/volume] in Blood by Automated count"
+    },
+    {
+      "reference": "urn:uuid:b6df6e6e-020e-e829-6bf9-a3ac724e43af",
+      "display": "Erythrocytes [#/volume] in Blood by Automated count"
+    },
+    {
+      "reference": "urn:uuid:5afff581-bd88-6915-dddb-05b772426c5a",
+      "display": "Hemoglobin [Mass/volume] in Blood"
+    },
+    {
+      "reference": "urn:uuid:fcc3eec8-29ab-be87-5fcd-cff8f7b9c0a2",
+      "display": "Hematocrit [Volume Fraction] of Blood by Automated count"
+    },
+    {
+      "reference": "urn:uuid:7c651a75-f0a0-9d76-ab85-65236a3282ba",
+      "display": "MCV [Entitic volume] by Automated count"
+    },
+    {
+      "reference": "urn:uuid:ca6f6904-7555-9963-78e5-9e64ee25d615",
+      "display": "MCH [Entitic mass] by Automated count"
+    },
+    {
+      "reference": "urn:uuid:32485331-c3e4-3616-2a76-0d131a440a39",
+      "display": "MCHC [Mass/volume] by Automated count"
+    },
+    {
+      "reference": "urn:uuid:83852e4f-61b7-e08c-8a95-3284c8aa3ed8",
+      "display": "Erythrocyte distribution width [Entitic volume] by Automated count"
+    },
+    {
+      "reference": "urn:uuid:f19c00b6-cc77-032f-f4cc-d23e62c5b520",
+      "display": "Platelets [#/volume] in Blood by Automated count"
+    },
+    {
+      "reference": "urn:uuid:702e9a9c-0aec-a947-3916-c24f4d0a6251",
+      "display": "Platelet distribution width [Entitic volume] in Blood by Automated count"
+    },
+    {
+      "reference": "urn:uuid:0fe7f709-0424-65b0-89f3-ddfccbe79790",
+      "display": "Platelet mean volume [Entitic volume] in Blood by Automated count"
+    }
+  ],
+  "code": {
+    "coding": [{
+      "system": "http://loinc.org",
+      "code": "58410-2",
+      "display": "Complete blood count (hemogram) panel - Blood by Automated count"
+    }],
+    "text": "Complete blood count (hemogram) panel - Blood by Automated count"
+  },
+  "performer": [{
+    "reference": "Organization?identifier=https://github.com/synthetichealth/synthea|58dcc9f2-80d7-32f8-a79c-170d89714a66",
+    "display": "PCP168404"
+  }],
+  "effectiveDateTime": "1982-09-11T17:57:46-04:00",
+  "meta": {"profile": ["http://hl7.org/fhir/us/core/StructureDefinition/us-core-diagnosticreport-lab"]},
+  "subject": {"reference": "urn:uuid:d7e5852a-974c-6d45-f81d-5a87bbd05d2a"},
+  "encounter": {"reference": "urn:uuid:d6d971f6-5881-0cd4-578e-210f8393c534"},
+  "category": [{"coding": [{
+    "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+    "code": "LAB",
+    "display": "Laboratory"
+  }]}],
+  "issued": "1982-09-11T17:57:46.296-04:00",
+  "resourceType": "DiagnosticReport",
+  "status": "final"
+}

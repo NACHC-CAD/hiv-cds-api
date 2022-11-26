@@ -8,7 +8,6 @@ import org.nachc.tools.fhirtoomop.fhir.parser.bundle.IBundleParser;
 import org.nachc.tools.fhirtoomop.fhir.parser.r4.bundle.BundleParser;
 import org.nachc.tools.fhirtoomop.fhir.parser.r4.diagnosticreport.DiagnosticReportParser;
 
-import com.nach.core.util.fhir.parser.FhirJsonParser;
 import com.nachc.hivcds.util.valueset.hivtest.HivTestCodes;
 
 public class HasHivTest {
@@ -34,7 +33,6 @@ public class HasHivTest {
 
 	public static HasHivTestResponse exec(String patientJson, HasHivTestResponse rtn) {
 		// get the list of diagnostic reports
-//		BundleParser parser = new BundleParser(patientJson);
 		IBundleParser parser = null;
 		try {
 			parser = new BundleParser(patientJson);
@@ -50,6 +48,7 @@ public class HasHivTest {
 		List<String> diagCodesForPatient = new ArrayList<String>();
 		for(DiagnosticReport diagReport : diagReportList) {
 			DiagnosticReportParser diagReportParser = new DiagnosticReportParser(diagReport);
+			rtn.getDiagnosticReports().add(diagReportParser);
 			List<String> codesInReport = diagReportParser.getCodes();
 			diagCodesForPatient.addAll(codesInReport);
 		}

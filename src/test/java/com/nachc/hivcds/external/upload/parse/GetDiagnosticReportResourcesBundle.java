@@ -16,7 +16,7 @@ import com.nach.core.util.file.FileUtil;
 import com.nach.core.util.json.JsonUtil;
 import com.nachc.hivcds.api.hashivtest.HasHivTestIntegrationTest;
 
-public class GetDiagnosticReportResources {
+public class GetDiagnosticReportResourcesBundle {
 
 	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(HasHivTestIntegrationTest.class);	
 	
@@ -35,21 +35,19 @@ public class GetDiagnosticReportResources {
 		List<DiagnosticReport> reports = parser.getResourceListForType(DiagnosticReport.class);
 		Bundle reportsBundle = new Bundle();
 		reportsBundle.setType(BundleType.COLLECTION);
-		File patientDir = FileUtil.getFromProjectRoot(OUT_DIR_NAME + "diagnostic-reports");
-		FileUtil.rmdir(patientDir);
-		int cnt = 0;
 		for(DiagnosticReport report : reports) {
-			cnt++;
 			BundleEntryComponent comp = new BundleEntryComponent();
 			comp.setResource(report);
 			reportsBundle.addEntry(comp);
-			String reportJson = FhirJsonParser.serialize(report);
-			reportJson = JsonUtil.prettyPrint(reportJson);
-			String fileName = "GlennDiagReport-" + cnt + ".json";
-			log.info("Got diagnostic report, writing file " + cnt + "...");
-			File outFile = new File (patientDir, fileName);
-			FileUtil.write(reportJson, outFile);
 		}
+		String reportsJson = FhirJsonParser.serialize(reportsBundle);
+		reportsJson = JsonUtil.prettyPrint(reportsJson);
+		log.info(reportsJson);
+		log.info("Got patient, writing file...");
+		File patientDir = FileUtil.getFromProjectRoot(OUT_DIR_NAME + "diagnostic-report-bundle");
+		FileUtil.rmdir(patientDir);
+		File outFile = new File (patientDir, "Glenn0_Hermiston_DiagnosticReports.json");
+		FileUtil.write(reportsJson, outFile);
 		log.info("Done.");
 	}
 }
