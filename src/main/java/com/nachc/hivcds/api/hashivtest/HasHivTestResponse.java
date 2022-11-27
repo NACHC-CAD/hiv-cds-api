@@ -27,6 +27,14 @@ public class HasHivTestResponse {
 		return this.hivTestCodes.size() > 0;
 	}
 
+	public boolean isHasTest() {
+		return this.hivTestCodes.size() > 0;
+	}
+
+	public boolean getHasTest() {
+		return this.hivTestCodes.size() > 0;
+	}
+
 	public List<DiagnosticReportParser> getDiagnosticReports() {
 		return this.reports;
 	}

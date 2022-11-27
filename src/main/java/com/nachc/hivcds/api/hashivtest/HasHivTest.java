@@ -40,6 +40,15 @@ public class HasHivTest {
 			parser = new org.nachc.tools.fhirtoomop.fhir.parser.bundle.BundleParser(patientJson);
 		}
 		List<DiagnosticReport> diagReportList = parser.getResourceListForType(DiagnosticReport.class);
+		rtn = exec(rtn, diagReportList);
+		return rtn;
+	}
+
+	public static HasHivTestResponse getForDiagnosticReportList(List<DiagnosticReport> diagReportList) {
+		return exec(new HasHivTestResponse(), diagReportList);
+	}
+
+	public static HasHivTestResponse exec(HasHivTestResponse rtn, List<DiagnosticReport> diagReportList) {
 		log.info("got " + diagReportList.size() + " diagnostic reports");
 		// get the list of test codes
 		List<String> hivTestCodes = HivTestCodes.get();
